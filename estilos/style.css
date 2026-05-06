@@ -8,11 +8,13 @@
   --destaque-inverso
   --fundo-card
 */
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 :root{ 
   --fundo-principal:#f5f5f5;
   --texto:#222222;
@@ -21,12 +23,14 @@
   --destaque-inverso:#66bbff;
   --fundo-card:#ffffff;
 }
+
 body{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   line-height: 1.5em;
   background-color: var(--fundo-principal);
   color: var(--texto);
 }
+
 header{
   background-color: var(--destaque);
   color: var(--texto);
@@ -41,6 +45,7 @@ nav#menu ul {
   display: flex;
   gap: 10px;
 }
+
 nav#menu a {
   text-decoration: none;
   color: var(--texto-inverso);
@@ -48,12 +53,13 @@ nav#menu a {
   padding: 12px 15px;
   border-radius: 5px;
   transition: background-color 0.5s, color 0.5s;
-  
 }
+
 nav#menu a:hover {
   background-color: var(--destaque-inverso);
   color: var(--destaque);
 }
+
 main {
   display: grid;
   grid-template-columns: auto 90vw auto;
@@ -67,6 +73,7 @@ section#ficha {
   border-radius: 8px;
   grid-column: 2;
 }
+
 section#ficha img.foto{
   width: 200px;
   aspect-ratio: 1/1;
@@ -79,12 +86,14 @@ section#ficha img.foto{
   margin: auto;
   margin-bottom: 15px;
 }
+
 section#ficha h1{
   color: var(--destaque);
   margin: 15px 0px;
   font-size: 1.5em;
   text-align: left;
 }
+
 div#social{
   display: flex;
   justify-content: center;
@@ -93,6 +102,7 @@ div#social{
   gap: 1em;
   margin-top: 15px;
 }
+
 div#social a {
   color: var(--destaque);
   transition: color 0.5s;
@@ -100,4 +110,37 @@ div#social a {
 
 div#social a:hover {
   color: var(--destaque-inverso);
+}
+
+section#detalhes{
+  grid-column: 2;
+}
+
+article{
+  background-color: var(--fundo-card);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+article h2{
+  color: var(--destaque);
+  margin-bottom: 10px;
+}
+
+.video-container{
+  position: relative;
+  width: 100%;
+  margin: auto;
+  aspect-ratio: 16/9;
+}
+
+.video-container iframe{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+
 }
